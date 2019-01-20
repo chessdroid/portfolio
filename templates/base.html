@@ -1,0 +1,236 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/77db6b98f3/UntitledProject/style.css">
+</head>
+<body data-spy="scroll" data-target="#myNavbar">
+  <nav class="navbar navbar-default" data-spy="affix">
+    <div class="container">
+      <div class="navbar-header">
+        <!--navbar logo-->
+        <a class="navbar-brand" href="https://www.freecodecamp.com/lat4589" target="_blank"><!-- <img src="https://res.cloudinary.com/dks3iazgj/image/upload/v1492011720/codepen/cplogogreen.png" height=25 class=""> --></img></a>
+      </div>
+      <div class="" id="myNavbar">
+        <!--navbar menu options-->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a id="about" href="#aboutSec">About</a></li>
+          <li><a id="portfolio" href="#portfolioSec">Projects</a></li>
+          <li><a id="contact" href="#contactSec">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--end Navigation-->
+
+  <!--About section-->
+
+  <section id="aboutSec" class="pg-sect sect-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <img class="img-responsive img-circle center-block" alt="Chris" src="{{admin.image.url}}">
+        </div>
+      </div>
+      <div class="row">
+
+        <h1 class="aboutTitle col-sm-12 text-center">{{admin.name}} {{admin.surname}}</h1>
+      </div>
+      <div class="row">
+        <h3 class="subtitle col-sm-12 text-center">{{admin.desc}}</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 maintext text-center">
+          <p>{{admin.desc}}
+    </p>
+        </div>
+      </div>
+
+      <div class="row">
+        
+        <div class="col-xs-2 text-center">
+          <span class="devicons devicons-html5">   
+  </div>
+  <div class="col-xs-2 text-center">
+<span class="devicons devicons-css3"> 
+  </div>
+  <div class="col-xs-2 text-center">
+<span class="devicons devicons-javascript">
+</div>
+      <div class="col-xs-2 text-center">
+<span class="devicons devicons-jquery">
+</div>
+        <div class="col-xs-2 text-center">
+          <span class="devicons devicons-wordpress">   
+  </div>
+  <div class="col-xs-2 text-center">
+<span class="devicons devicons-php"> 
+  </div>
+    
+      </div>
+    
+</section><!--end about section-->
+
+<!--Portfolio section-->
+  <section id="portfolioSec" class="pg-sect sect-2">
+  <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+  <h1 class="sect-header">Projects</h1>
+  </div>
+  </div>
+  <div class="row">
+    {% for project in projects %}
+    <div class="col-sm-3 col-xs-6">
+            <div class="thumbnail">
+    <img class="img-rounded center-block" src="{{project.image.url}}">
+            <div class="caption">
+        <h3 class="portsubhead text-center">{{project.title}}</h3>
+        <p class="text-center">{{project.desc}}</p>
+        <p> <a href="#" class="btn btn-default btn-block" role="button" target="_blank">View Project</a></p>
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+    <!-- <div class="col-sm-3 col-xs-6">
+      <div class="thumbnail">
+    <img class="img-rounded center-block" src="https://res.cloudinary.com/dks3iazgj/image/upload/v1491934644/codepen/pom_b1ouzr.png">
+                  <div class="caption">
+        <h3 class="portsubhead text-center">Pomodoro Timer</h3>
+        <p class="text-center">Pomodoro timer built for freeCodeCamp using Javascript.</p>
+        <p> <a href="https://codepen.io/chrisparker/pen/evgwQy" class="btn btn-default btn-block" role="button" target="_blank">View Project</a></p>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-3 col-xs-6">
+            <div class="thumbnail">
+    <img class="img-rounded center-block" src="https://res.cloudinary.com/dks3iazgj/image/upload/v1491934649/codepen/rqg_wiphof.png">
+                        <div class="caption">
+        <h3 class="portsubhead text-center">Random Quote Generator</h3>
+        <p class="text-center">Random quote machine built for freeCodeCamp using JSON API.</p>
+        <p> <a href="https://codepen.io/chrisparker/pen/gLVwxr" class="btn btn-default btn-block" role="button" target="_blank">View Project</a></p>
+      </div>
+      </div>
+    </div> -->
+   <!--  <div class="col-sm-3 col-xs-6">
+            <div class="thumbnail">
+    <img class="img-rounded center-block" src="https://res.cloudinary.com/dks3iazgj/image/upload/v1491934655/codepen/ttt_n3ozj3.png">
+                              <div class="caption">
+        <h3 class="portsubhead text-center">Tic Tac Toe</h3>
+        <p class="text-center">Tic Tac Toe game built for freeCodeCamp using Javascript.</p>
+        <p> <a href="https://codepen.io/chrisparker/pen/gmxvra" class="btn btn-default btn-block" role="button" target="_blank">View Project</a></p>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="col-sm-3 col-xs-6">
+            <div class="thumbnail">
+
+                              <div class="caption">
+        <h3 class="portsubhead text-center">Tic Tac Toe</h3>
+        <p class="text-center">Tic Tac Toe game built for freeCkjlkbljkhljbjbjk lkh bkj hkjh kjhjkbkj kjh kjkj hkj jk jkhk
+      odeCamp using Javasc
+    'k;j;jj dpo jilfhfhhgjkfh lgkfh l
+  fog jfjgfj gklf
+fgp oj;fj glkj lkf jlkjdfhript.</p>
+        <p> <a href="https://codepen.io/chrisparker/pen/gmxvra" class="btn btn-default btn-block" role="button" target="_blank">View Project</a></p>
+      </div>
+    </div>
+  </div> -->
+
+</div>
+</section><!--end portfolio section-->
+
+<!--Contact section-->
+  <section id="contactSec" class="pg-sect sect-3">
+  <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="sect-header">Contact</h1>
+  </div>
+            <div class="contact-desc col-sm-4">
+        <h3>Lets chat!</h3> 
+          <p>Fill out the form and I will get back to you ASAP!</p>
+        </div>
+    <!--contact form-->
+  <div class="col-sm-8 form-fields">
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+
+      </div>
+      <div class="form-group">
+
+          <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+
+      </div>
+      <div class="form-group">
+        
+
+          <textarea type="email" class="form-control message-area" id="message" placeholder="Enter your message" rows="5" required></textarea>
+
+      </div>
+      <div class="form-group">
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block submit-button">Submit</button>
+
+      </div>
+    </form>
+  </div>
+    <!--end form-->
+
+</div>
+</div>
+</section><!--end contact section-->
+
+<!--footer section-->
+<footer>
+  <div class="container">
+    <div class="row">
+    <p class="text-center col-sm-12">
+    <a class="footer-sm-links" href="" target="_blank">
+<i class="fa fa-facebook-official" aria-hidden="true"></i>
+
+    </a>
+    <a class="footer-sm-links" href="" target="_blank">
+<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+
+    </a>
+    
+    </p>
+    </div>
+  </div>
+</footer>           
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+  //add smooth scroll to section when nav item clicked//
+
+  addClickListener();
+});
+navbarheight = $('nav').height(); 
+
+function addClickListener(){
+$("nav .container #myNavbar ul li a").click(function(e){
+  e.preventDefault();
+  var secID = e.currentTarget.id + "Sec";
+  $("html, body").animate({
+    scrollTop: $("#" + secID).offset().top
+  }, 1000)
+})
+}
+//Bootstrap ScrollSpy
+$('body').scrollspy({ target: '#myNavbar' });
+
+
+</script>
+</body>
+</html>

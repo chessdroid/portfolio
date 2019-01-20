@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto|Oswald);
+body{
+  position: rel ative;
+  font-family:"Roboto Condensed", sans-serif;
+}
+nav{
+  z-index:9999;
+}
+nav,h1,h3 {
+  font-family:"Oswald", sans-serif;
+}
+.navbar {
+  border:none;
+  border-radius:0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom:0px;
+}
+
+.navbar-toggle{
+  border-radius:0px;
+}
+.affix {
+  top: 0;
+  width: 100%;
+}
+.navbar-default .navbar-nav > .active > #about, .navbar-default .navbar-nav > .active > #about:focus, .navbar-default .navbar-nav > .active > #about:hover {
+    background-color: #78B8BA;
+    color: #F8F8F8;
+    border-bottom: 5px solid #78B8BA;
+    outline: 0;
+}
+.navbar-default .navbar-nav > .active > #portfolio, .navbar-default .navbar-nav > .active > #portfolio:focus, .navbar-default .navbar-nav > .active > #portfolio:hover {
+    background-color: #2587A2;
+    color: #F8F8F8;
+    border-bottom: 5px solid #2587A2;
+    outline: 0;
+}
+.navbar-default .navbar-nav > .active > #contact, .navbar-default .navbar-nav > .active > #contact:focus, .navbar-default .navbar-nav > .active > #contact:hover {
+    background-color: #05556B;
+    color: #F8F8F8;
+    border-bottom: 5px solid #05556B;
+    outline: 0;
+}
+.navbar-nav > li > a {
+    padding-bottom: 10px;
+    padding-top: 15px;
+    color:#000000;
+}
+.aboutTitle{
+  margin-top:0px;
+}
+.subtitle{
+  margin-top:0px;
+  margin-bottom:40px
+}
+.devicons{
+  font-size:3em;
+}
+
+.maintext {
+      font-size: 1.32em;
+      margin-bottom: 40px;
+}
+.pg-sect{
+  padding: 25px 0px;
+  min-height:400px;
+}
+.sect-header{
+  padding: 20px 0px 40px 0px;
+  text-transform:uppercase;
+}
+.sect-1{
+  background: #80BCBB; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#80BCBB, #2A8EA9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#80BCBB, #2A8EA9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#80BCBB, #2A8EA9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#80BCBB, #2A8EA9); /* Standard syntax */
+  padding-top:100px;
+  color:#FFFFFF;
+}
+.thumbnail{
+  background-color:rgba(255, 255, 255, 0.5);
+}
+.img-circle {
+    border: 5px solid #ffffff;
+  margin-bottom:25px;
+}
+.img-thumbnail{
+    margin-bottom:25px;
+}
+.portsubhead{
+  min-height: 53px;
+}
+.sect-2{
+  background: #2A8EA9; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#2A8EA9, #055D75); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#2A8EA9, #055D75); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#2A8EA9, #055D75); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#2A8EA9, #055D75); /* Standard syntax */
+
+  color:#FFFFFF;
+}
+.sect-3{
+  background: #055D75; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#055D75, #021F2D); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#055D75, #021F2D); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#055D75, #021F2D); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#055D75, #021F2D); /* Standard syntax */
+
+  color:#FFFFFF;
+}
+.contact-desc>h3{
+margin-top:0px;
+}
+.form-fields{
+  padding: 0px 25px;
+}
+
+footer {
+  background-color:#021F2D;
+  color:#FFFFFF;
+  padding:50px 0px 200px;
+}
+.footer-sm-links{
+  font-size:2em;
+  color:white;
+  margin-right:5px;
+}
+@media only screen and (max-width: 325px) {
+    .devicons {
+        font-size:2em;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .sect-header {
+        text-align:center;
+    }
+}
+@media only screen and (min-width: 290px) {
+.navbar-nav{
+  margin:0px;
+  float: right!important;
+  margin-right: -15px;
+}
+.nav>li{
+    position: relative;
+    display: block;
+    float: left;
+}
+.navbar-header{
+  float:left;
+}
+}
+@media only screen and (max-width: 290px) {
+  .navbar-nav{
+    display:none;
+  }
+}
